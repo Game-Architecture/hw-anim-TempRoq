@@ -23,7 +23,7 @@ ga_quatf nlerp(ga_quatf q1, ga_quatf q2, float t);
 */
 struct ga_animkey
 {
-	float _time;
+	float _time; // frame that it occurs on
 	ga_quatf _rotation;
 	ga_vec3f _translation;
 	ga_vec3f _scale;
@@ -38,7 +38,7 @@ struct ga_animkey
 struct ga_animchannel
 {
 	class ga_node* _node;
-	std::vector<ga_animkey> _keys;
+	std::vector<ga_animkey> _keys; //keyframes of an animation
 	short currKey;
 };
 
